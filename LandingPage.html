@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Hash Algorithm (SHA)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css" integrity="sha512-8RxmFOVaKQe/xtg6lbscU9DU0IRhURWEuiI0tXevv+lXbAHfkpamD4VKFQRto9WgfOJDwOZ74c/s9Yesv3VvIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <div class="but">
+    <h2>Smart work</h2>
+</div>
+    <hr>
+    
+    <ul class="horizontal-list">
+        
+        <div class="menu-bar">
+            <a id="menu-icon" href="#">
+                <img src="4663114.png" alt="Menu Icon" style="height:30px; width: 30px; border: 2px solid #333; border-radius: 10px;">
+            </a>
+            
+            <div class="menu-options" id="menu-options">
+                <a href="https://en.wikipedia.org/wiki/SHA-1">Home</a>
+                <a href="https://en.wikipedia.org/wiki/SHA-2">profile</a>
+                <a href="https://en.wikipedia.org/wiki/SHA-3">register</a>
+                <a href="https://en.wikipedia.org/wiki/SHA-3">login</a>
+                <a href="https://en.wikipedia.org/wiki/SHA-3">guest</a>
+                <a href="https://en.wikipedia.org/wiki/SHA-3">support</a>
+            </div>
+        </div>
+    </ul>
+    <div class="cont">
+    <div class="image-container">
+        <img id="output.jpg" src="output.jpg" alt="Image 1" class="image">
+        <img id="output2.png" src="output2.png" alt="Image 2" class="image">
+        <img id="output1.png" src="output1.png" alt="Image 3" class="image">
+    </div>
+    <h1> " Step into the AI world – where innovation meets intelligence! "</h1>
+</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+           
+            document.getElementById('menu-icon').addEventListener('click', function () {
+                var menuOptions = document.getElementById('menu-options');
+                menuOptions.style.display = (menuOptions.style.display === 'none' || menuOptions.style.display === '') ? 'flex' : 'none';
+
+                
+                var menuIconRect = this.getBoundingClientRect();
+                menuOptions.style.top = menuIconRect.top + 'px';
+menuOptions.style.left = menuIconRect.right + 'px';
+
+            });
+
+           
+            var horizontalListImages = document.querySelectorAll('.horizontal-list img');
+            for (var i = 0; i < horizontalListImages.length; i++) {
+                horizontalListImages[i].addEventListener('click', function () {
+                    this.classList.add('remove-image');
+
+                    var menuOptions = document.getElementById('menu-options');
+                    menuOptions.style.display = 'flex';
+                });
+            }
+        });
+        
+
+        let imageCount = 1;
+
+        function displayImage() {
+            const images = ['output.jpg', 'output2.png', 'output1.png']; 
+            const currentImage = images[imageCount - 1];
+            const previousImage = images[imageCount === 1 ? images.length - 1 : imageCount - 2];
+        
+            document.getElementById(currentImage).style.display = 'block';
+            document.getElementById(previousImage).style.display = 'none';
+        
+            imageCount = imageCount === images.length ? 1 : imageCount + 1;
+        }
+        
+        
+
+        
+        displayImage();
+        setInterval(displayImage, 3000);
+    </script>
+  
+
+
+
+    <script>
+        var horizontalListImages = document.querySelectorAll('.horizontal-list img');
+        for (var i = 0; i < horizontalListImages.length; i++) {
+            horizontalListImages[i].addEventListener('click', function () {
+                for (var j = 0; j < horizontalListImages.length; j++) {
+                    horizontalListImages[j].classList.remove('active');
+                }
+                this.classList.add('active');
+            });
+        }
+    </script>
+
+    <br>
+    
+    <hr>
+    <div class="container">
+        
+        <div class="text">
+            <a href="https://chat.openai.com/"><h3>ChatGPT</h3></a> 
+            <p>TChatGPT, developed by OpenAI, is a cutting-edge language model utilizing the GPT architecture. With 175 billion parameters, it excels in understanding and generating human-like text. Tailored for conversation, ChatGPT responds to user queries, providing information and engaging in diverse topics. It lacks personal experiences or real-time awareness, as its responses are based on patterns learned from pre-existing data. Users can interact with ChatGPT through various platforms, leveraging its versatility for natural language conversations. It stands out as one of the largest language models, showcasing advancements in natural language processing.</p>
+        </div>
+       
+        <img src="output3.jpeg" alt="Your Image Description" style="width: 300px; border: 2px solid #333; border-radius: 10px;">
+    </div>
+
+    <hr>
+    <div class="container">
+      
+        <div class="text">
+            <a href="https://dreamstudio.ai/"><h3>DreamStudio</h3></a> 
+            <p>DreamStudio gives you a huge amount of control over the various aspects of generating an image with AI. When you type in your prompt, there are sliders that allow you to determine how large the final image is, how closely it matches the prompt you give it, how many steps the diffusion model takes, and how many images are generated. You can also select what version of the algorithm it uses (the latest is SDXL 1.0), and even enter a specific seed so that you get repeatable results (otherwise, they're randomly generated). DreamStudio also has in-painting and out-painting, though you need to use Chrome to access them, and more editing features are apparently coming soon.</p>
+        </div>
+   
+        <img src="output4.jpeg" alt="Your Image Description" style="height:190px; width: 300px; border: 2px solid #333; border-radius: 10px;">
+    </div>
+
+    <hr>
+    <div class="container">
+       
+        <div class="text">
+            <a href="https://dreamstudio.ai/"><h3>ChatPilot</h3></a> 
+            <p>ChatPilot is a fantastic tool for those who want to read, write, and learn faster. It helps simplify complex topics, find information, and get instant answers. We support various formats such as PDF, Word, Excel, PPT, and more!</p>
+        </div>
+      
+        <img src="output5.jpeg" alt="Your Image Description" style="height:190px; width: 300px; border: 2px solid #333; border-radius: 10px;">
+    </div>
+    <br>
+    <hr>
+    <div class="container">
+      
+        <div class="text">
+            <a href="https://dreamstudio.ai/"><h3>Chai</h3></a> 
+            <p>Chai Online is more than just a chatbot; it's a platform to explore the potential of AI-driven conversations. Whether you're seeking knowledge, killing time, or simply enjoying a chat with AI, Chai is at your service. Engaging in AI chat has never been this effortless and enjoyable.</p>
+        </div>
+   
+        <img src="download.jpeg" alt="Your Image Description" style="height:190px; width: 300px; border: 2px solid #333; border-radius: 10px;">
+    </div>
+
+    <i class="fa-solid fa-laptop-code"></i>
+    <hr>
+   <h4>1    2    3    4  5  6  7 . . . . . .    Last</h4>
+    <br>
+    <nav>
+        <ul class="horizontal-list">
+            <li><a href="https://nyprofile.sha1.ny/">help</a></li>
+            <li><a href="https://nyprofile.sha256.ny/">support</a></li>
+            <li><a href="https://nyprofile.sha384.ny/">contact</a></li>
+            <li><a href="https://nyprofile.sha512.ny/">feedback</a></li>
+        </ul>
+    </nav>
+    <h4><a href="">email</a></h4><br>
+    <h4><a href="">linkedin</a></h4><br>
+    <h4><a href="">contact</a></h4>
+</body>
+</html>
